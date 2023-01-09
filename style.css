@@ -1,0 +1,294 @@
+body {
+  margin: 350px;
+  font-family: "Mukta", sans-serif;
+}
+
+/* Menu top of page*/
+nav {
+  display: flex;
+  padding-top: 10px;
+}
+
+nav .logo {
+  flex: 2;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+.burger img {
+  width: 50px;
+  height: 50px;
+  display: none;
+}
+
+nav .menu {
+  flex: 1;
+  display: flex;
+}
+
+nav .menu ul {
+  list-style-type: none;
+  display: flex;
+  margin: 20px;
+}
+
+nav .menuPhone ul {
+  display: none;
+}
+nav .menuPhone ul a {
+  font-size: 20px;
+  padding-right: 45px;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+}
+
+nav .menu ul a {
+  font-size: 20px;
+  padding-right: 45px;
+  text-decoration: none;
+  color: black;
+}
+
+nav .menu ul a:hover {
+  color: hsl(35, 77%, 62%);
+}
+
+/* Menu main*/
+.imgMobile {
+  display: none;
+  z-index: 1;
+}
+
+.main {
+  margin-top: 35px;
+  display: flex;
+}
+
+/*Main left*/
+.main .left {
+  flex: 6;
+}
+
+.main .left .imgDesktop {
+  max-width: 100%;
+  height: auto;
+}
+
+.main .left .descriptionImage {
+  display: flex;
+}
+
+.main .left .descriptionImage h1 {
+  flex: 3;
+  font-size: 2.8rem;
+  font-weight: bold;
+  transition: 0.5s;
+}
+
+.main .left .descriptionImage h1:hover {
+  color: hsl(35, 77%, 62%);
+  transition: 0.5s;
+}
+
+.main .left .descriptionImage p {
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+}
+.main .left .descriptionImage p:hover {
+  color: hsl(236, 13%, 42%);
+}
+
+.main .left .descriptionImage .descriptionAndButton {
+  flex: 5;
+  padding: 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.main .left .descriptionImage .descriptionAndButton button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  width: 200px;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+
+.main .left .descriptionImage .descriptionAndButton button:hover {
+  background-color: hsl(5, 85%, 63%);
+  color: black;
+  transition: 0.5s;
+}
+
+/*Main right*/
+.main .right {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  padding-left: 30px;
+  padding-right: 30px;
+  background-color: black;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 40px;
+}
+
+.main .right h2 {
+  font-size: 2.5rem;
+  color: hsl(35, 77%, 62%);
+}
+
+.main .right .newText h3 {
+  color: white;
+}
+
+.main .right .newText h3:hover {
+  color: hsl(35, 77%, 62%);
+}
+
+.main .right .newTextBorder {
+  border-bottom: 1px solid hsl(236, 13%, 42%);
+  padding-bottom: 20px;
+}
+
+.main .right .newText p {
+  color: hsl(236, 13%, 42%);
+}
+.main .right .newText p:hover {
+  color: hsl(237, 24%, 65%);
+}
+
+/*Bas de page*/
+
+.bottomPage {
+  margin-top: 30px;
+  display: flex;
+  height: 300px;
+}
+
+.bottomPage section {
+  display: flex;
+}
+
+.bottomPage section div {
+  padding-left: 15px;
+}
+
+.bottomPage section img {
+  height: 50%;
+  max-height: auto;
+}
+.bottomPage section h3 {
+  font-size: 40px;
+  color: hsl(236, 13%, 42%);
+  margin: 0px;
+}
+.bottomPage section h3:hover {
+  color: hsl(35, 77%, 62%);
+}
+
+.bottomPage section h4:hover {
+  color: hsl(5, 85%, 63%);
+}
+
+.bottomPage section p {
+  color: hsl(236, 13%, 42%);
+  width: 80%;
+}
+.bottomPage section p:hover {
+  color: hsl(0, 0%, 0%);
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+@media screen and (max-width: 600px) {
+  body {
+    margin-top: 40px;
+  }
+  /*NAV*/
+  .burger img {
+    display: block;
+    position: relative;
+    padding-top: 10px;
+    top: 0;
+    left: 500px;
+  }
+
+  .menuPhone {
+    top: 0;
+    left: 150px;
+  }
+
+  nav .menuPhone #listUlPhone {
+    list-style-type: none;
+    flex-direction: column;
+    margin: 20px;
+    background-color: hsl(0, 0%, 84%);
+    color: white;
+    padding: 20px;
+    position: absolute;
+    z-index: 2;
+    right: -620px;
+    top: 40px;
+  }
+
+  nav .menuPhone #close {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    top: 0;
+    left: 80px;
+  }
+
+  .menu .listUl {
+    display: none;
+  }
+
+  /*MAIN*/
+  .main {
+    display: inline-block;
+  }
+  main .left {
+    flex: none;
+  }
+  .main .right {
+    margin-top: 40px;
+    display: inline-block;
+
+    background-color: black;
+  }
+  .main .left .imgMobile {
+    display: flex;
+  }
+  .main .left .imgDesktop {
+    display: none;
+  }
+  .descriptionImage {
+    flex-direction: column;
+  }
+
+  .descriptionAndButton {
+    padding: 1px;
+  }
+
+  .bottomPage {
+    margin-top: 30px;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+    width: 550px;
+  }
+
+  .bottomPage section {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+}
